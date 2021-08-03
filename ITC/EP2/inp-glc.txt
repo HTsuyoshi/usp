@@ -1,0 +1,93 @@
+5
+6 2 15
+S0 S T U A B
+a b
+S0 => &
+S0 => A T
+S0 => B U
+S0 => S S
+S0 => A B
+S0 => B A
+S => A T
+S => B U
+S => S S
+S => A B
+S => B A
+T => S B
+U => S A
+A => a
+B => b
+6 2 15
+S T U V A B
+a b
+S => A U
+S => B V
+S => A A
+S => B B
+S => a
+S => b
+S => &
+T => A T
+T => B T
+T => a
+T => b
+U => T A
+V => T B
+A => a
+B => b
+10 5 16
+EXP TER FAT U V X Y Z A B
+d + * ( )
+EXP => EXP U
+EXP => TER V
+EXP => A X
+EXP => d
+TER => TER V
+TER => A X
+TER => d
+FAT => A X
+FAT => d
+U => Y TER
+V => Z FAT
+X => EXP B
+Y => +
+Z => *
+A => (
+B => )
+7 3 15
+S0 S B U X Y Z
+a b c
+S0 => & 
+S0 => X U
+S0 => X Z
+S0 => Y B
+S0 => b
+S => X U
+S => X Z
+S => Y B
+S => b
+B => Y B
+B => b
+U => S Z
+X => a
+Y => b
+Z => c
+8 3 16
+S0 S T U V A B C
+a b c
+S0 => & 
+S0 => A U
+S0 => A C
+S0 => A V
+S0 => A B
+S => A U
+S => A C
+S => A V
+S => A B
+T => A V
+T => A B
+U => S C
+V => T B
+A => a
+B => b
+C => c

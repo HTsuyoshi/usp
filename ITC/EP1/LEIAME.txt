@@ -1,0 +1,5 @@
+Java
+openjdk version "1.8.0_292"
+vim 0.4.4
+Linux 5.12.3-arch1-1 #1 SMP PREEMPT Wed, 12 May 2021 17:54:18 +0000 x86_64 GNU/Linux
+javac glc.java

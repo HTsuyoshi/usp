@@ -1,0 +1,59 @@
+Descricoes das gramaticas de exemplo:
+
+#####################
+Gramatica 1:
+
+Esta gramatica gera a seguinte linguagem sobre o alfabeto {a,b}
+
+{ w | w contem a mesma quantidade de 'a's e de 'b's}
+
+GLC original:
+
+S -> aSb | bSa | SS | &
+
+(& denota a cadeia vazia)
+
+
+#####################
+Gramatica 2:
+
+Esta gramatica reconhece a seguinte linguagem sobre o alfabeto {a,b}
+
+{ w | w comeca e termina com a mesma letra}
+
+GLC original:
+
+S -> aTa | bTb | & | a | b
+T -> aT | bT | &
+
+
+#####################
+Gramatica 3:
+
+Esta GLC corresponde ao exemplo 2.4 do Livro do Sipser:
+
+EXP -> EXP + TER | TER
+TER -> TER * FAT | FAT
+FAT -> ( EXP ) | d
+
+
+#####################
+Gramatica 4:
+
+Esta gramatica gera a seguinte linguagem sobre o alfabeto {a,b,c}
+
+{ a^n b* c^n } 
+Ou seja, cadeias da forma a* b* c* que contenham a mesma quantidade de a's e de c's
+
+
+#####################
+Gramatica 5:
+
+Esta gramatica gera a seguinte linguagem sobre o alfabeto {a,b,c}
+
+{a^i b^j c^k | i,j,k>=0, i=j+k}
+Ou seja, cadeias da forma a* b* c* nas quais a quantidade de a's eh igual aa quantidade de b's mais a quantidade de c's
+
+Gramatica original (não FNC)
+S => aSc | T | &
+T => aTb | &
