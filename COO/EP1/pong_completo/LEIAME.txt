@@ -1,0 +1,21 @@
+Nome: Gustavo Tsuyoshi Ariga	NroUSP: 11857215
+Nome: Henrique Tsuyoshi Yara	NroUSP: 11796083
+
+========== Compilação ==========
+
+Para compilar o programa basta executar o comando make no terminal:
+
+$ make
+
+Ele vai compilar e colocar 3 arquivos .class no diretório atual
+
+=========== Execução ===========
+
+Para executar o programa basta executar:
+(considerando que os arquivos .class estão na pasta atual)
+
+$ java Pong
+
+ou
+
+$ java Pong 10 true
