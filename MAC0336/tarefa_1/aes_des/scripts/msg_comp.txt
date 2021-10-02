@@ -1,0 +1,77 @@
+********** Mensagem normal **********
+
+Key     : 0209000700010000
+Message : 1179602211796022
+Message being processed : 1179602211796022
+
+Subkey 1  : 0x000000010009
+(E1, D1): (0x00ee2288; 0x32a6f73e)
+Subkey 2  : 0x000000200680
+(E2, D2): (0x32a6f73e; 0x63c30f2a)
+Subkey 3  : 0x000000180003
+(E3, D3): (0x63c30f2a; 0xcc519dad)
+Subkey 4  : 0x000000064000
+(E4, D4): (0xcc519dad; 0xde091d5e)
+Subkey 5  : 0x000000002140
+(E5, D5): (0xde091d5e; 0x8902388e)
+Subkey 6  : 0x000000a08000
+(E6, D6): (0x8902388e; 0xb3fc4207)
+Subkey 7  : 0x000000400602
+(E7, D7): (0xb3fc4207; 0x3a35e3ac)
+Subkey 8  : 0x0000001c0008
+(E8, D8): (0x3a35e3ac; 0x3bd3c313)
+Subkey 9  : 0x000000000424
+(E9, D9): (0x3bd3c313; 0x284bd431)
+Subkey 10  : 0x000000480880
+(E10, D10): (0x284bd431; 0x34799fd6)
+Subkey 11  : 0x000000004019
+(E11, D11): (0x34799fd6; 0x4357cdb7)
+Subkey 12  : 0x000000031000
+(E12, D12): (0x4357cdb7; 0x61f21e01)
+Subkey 13  : 0x000000800120
+(E13, D13): (0x61f21e01; 0xde7ca3e3)
+Subkey 14  : 0x000000000a04
+(E14, D14): (0xde7ca3e3; 0x0bd007e4)
+Subkey 15  : 0x000000500090
+(E15, D15): (0x0bd007e4; 0xbe348e0f)
+Subkey 16  : 0x00000080a004
+(E16, D16): (0xbe348e0f; 0x41078409)
+
+********** Mensagem complementada **********
+
+Key     : 0209000700010000
+Message : 9179602211796022
+Message being processed : 9179602211796022
+
+Subkey 1  : 0x000000010009
+(E1, D1): (0x01ee2288; 0x76aff62e)
+Subkey 2  : 0x000000200680
+(E2, D2): (0x76aff62e; 0xbd7b26f0)
+Subkey 3  : 0x000000180003
+(E3, D3): (0xbd7b26f0; 0x286c8ce8)
+Subkey 4  : 0x000000064000
+(E4, D4): (0x286c8ce8; 0x2470e4f7)
+Subkey 5  : 0x000000002140
+(E5, D5): (0x2470e4f7; 0xffbb0a71)
+Subkey 6  : 0x000000a08000
+(E6, D6): (0xffbb0a71; 0x22ac1cb8)
+Subkey 7  : 0x000000400602
+(E7, D7): (0x22ac1cb8; 0x7b588e0a)
+Subkey 8  : 0x0000001c0008
+(E8, D8): (0x7b588e0a; 0xcdb83d43)
+Subkey 9  : 0x000000000424
+(E9, D9): (0xcdb83d43; 0xee94f446)
+Subkey 10  : 0x000000480880
+(E10, D10): (0xee94f446; 0xaad372a1)
+Subkey 11  : 0x000000004019
+(E11, D11): (0xaad372a1; 0xed95b64d)
+Subkey 12  : 0x000000031000
+(E12, D12): (0xed95b64d; 0x06ed9081)
+Subkey 13  : 0x000000800120
+(E13, D13): (0x06ed9081; 0xc3da3f00)
+Subkey 14  : 0x000000000a04
+(E14, D14): (0xc3da3f00; 0xc9985cba)
+Subkey 15  : 0x000000500090
+(E15, D15): (0xc9985cba; 0x4d2d2eee)
+Subkey 16  : 0x00000080a004
+(E16, D16): (0x4d2d2eee; 0xdd39c753)

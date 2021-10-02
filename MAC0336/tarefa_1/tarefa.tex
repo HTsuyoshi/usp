@@ -1,0 +1,352 @@
+%Baseado em
+% https://www.overleaf.com/latex/templates/cse-3500-algorithms-and-complexity-homework-template/wrfwdhfzpnqc
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor} \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{xspace}
+
+\usepackage[brazilian]{babel}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{MAC0336}
+\newcommand\prof{Routo Terada}
+\newcommand\hwnumber{1}                   % <-- homework number
+\newcommand\NUSP{11796083}                % <-- NUSP
+\newcommand\sname{Henrique Tsuyoshi Yara}               % <-- Name
+
+\newcommand\answer{\textbf{Resolução.}\xspace}
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\sname \\ \NUSP}
+\chead{\textbf{\Large Lista \hwnumber}}
+\rhead{\course\, - \prof \\ \today}       % \today deixa o dia de hoje automaticamente
+\lfoot{}
+\cfoot{}
+\rfoot{\center\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+% Use \section*{} em vez de \section{} para evitar que o Latex numere as
+% seções. Isso evita que fique redundante "1 Exercício 1", por exemplo.
+\section*{Exercício 1}
+
+Uma fonte de informação $\mathcal{X}$ gera saídas $\{ x_1, \ldots, x_n\}$
+com as probabilidades $p(x_1),$ $\ldots,$ e $p(x_n)$.
+Lembre que a entropia de Shannon é definida como:
+\[
+    H \left( \mathcal{X} \right) = \sum_{i = 1}^{n} p(x_i) \log_2 \left( \frac{1}{p(x_i)} \right).
+\]
+
+%%%%%%%% ITEM 1.1 %%%%%%%%
+\subsection*{1.1}
+Escrever todos os passos do cálculo da entropia de $X$ para as seguintes probabilidades:
+% Usei multicols aqui para os itens ocuparem menos espaço.
+\begin{multicols}{3} % Poderia tirar essa linha
+  \begin{itemize}
+    \item $p(x_1) = 1/4$,
+    \item $p(x_2) = 1/16$,
+    \item $p(x_3) = 1/16$,
+    \item $p(x_4) = 1/16$,
+    \item $p(x_5) = 1/4$,
+    \item $p(x_6) = 1/16$,
+    \item $p(x_7) = 1/4$.
+    \item[\vspace{\fill}] % Placeholder para ocupar as linhas que faltam quando
+                          % os itens 7 são quebrados em colunas de 3.
+  \end{itemize}
+\end{multicols} % Poderia tirar essa linha
+
+%%%%%%%% Resposta do item 1.1 %%%%%%%%
+
+\answer \\
+Usando a definição de entropia e aplicando os valores das probabilidades acima,
+temos \ldots
+
+\begin{enumerate}
+    \item $E(X) = p(x_1)log_2[\frac{1}{p(x_1)}] + p(x_2)log_2[\frac{1}{p(x2)}] + p(x_3)log_2[\frac{1}{p(x_3)}] + p(x_4)log_2[\frac{1}{p(x_4)}] + p(x_5)log_2[\frac{1}{p(x_5)}] + p(x_6)log_2[\frac{1}{p(x_6)}] + p(x_7)log_2[\frac{1}{p(x_7)}]$
+    \item $E(X) = \frac{1}{4} log_2[\frac{1}{(\frac{1}{4})}] + \frac{1}{16} log_2[\frac{1}{(\frac{1}{16})}] + \frac{1}{16} log_2[\frac{1}{(\frac{1}{16})}] + \frac{1}{16} log_2[\frac{1}{(\frac{1}{16})}] + \frac{1}{4} log_2[\frac{1}{(\frac{1}{4})}] + \frac{1}{16} log_2[\frac{1}{(\frac{1}{16})}] + \frac{1}{4} log_2[\frac{1}{(\frac{1}{4})}]$
+    \item $E(X) = \frac{1}{4}log_2[4] + \frac{1}{16} log_2[16] + \frac{1}{16} log_2[16] + \frac{1}{16} log_2[16] + \frac{1}{4}log_2[4] + \frac{1}{16} log_2[16] + \frac{1}{4}log_2[4]$
+    \item $E(X) = \frac{1}{4}*2 + \frac{1}{16} *4 + \frac{1}{16} *4 + \frac{1}{16} *4 + \frac{1}{4}*2 + \frac{1}{16} *4 + \frac{1}{4}*2$
+    \item $E(X) = \frac{1}{2}*3 + 4*\frac{1}{4}$
+    \item $E(X) = \frac{3}{2} + 1$
+    \item $E(X) = \frac{5}{2}$
+    \item $E(X) = 2,5$
+\end{enumerate}
+
+\qed % Desenha um quadradinho no fim para explicitar que acabou a resolução.
+%%%%%%%% FIM DO ITEM 1.1 %%%%%%%%
+
+\subsection*{1.2}
+Para $j = 1,2,...n$, seja $max_j \lceil log_2[\frac{1}{p(x_j)}] \rceil = C$. Demostrar (i.e., provar matematicamente) que esse valor maximo C e o numero de bits dos $x_j$ : j = 1,2,...n. \\
+
+\answer \\
+
+Supondo que temos n indices na tabela o valor do indice precisa ser pelo menos $\lceil log_2(n) \rceil$. \\ \\
+
+Para provar $C = max_j \lceil log_2[\frac{1}{p(x_j)}] \rceil \geq \lceil log_2(n) \rceil $. \\ \\
+
+Sabendo que o menor $max_j$ possivel ocorre quando $p(x_i) = \frac{1}{n}$, pois para algum $p(x_i) < \frac{1}{n}$ vai existir $p(x_j) > \frac{1}{n}$ ja que $\sum_{i=1}^n p(x_i)= 1$ e o $max_j$ aumentaria.\\ \\
+
+Portanto o menor $max_j \lceil p(x_i) \rceil$ possivel ocorre quando:\\ \\
+$p(x_i) = \frac{1}{n}$
+
+\begin{enumerate}
+    \item $max_j \lceil log_2[\frac{1}{p(x_j)}] \geq \lceil log_2(\frac{1}{p(x_j)}) \rceil$
+    \item $max_j \lceil log_2[\frac{1}{p(x_j)}] \geq \lceil log_2(\frac{1}{n^{-1}}) \rceil$
+    \item $max_j \lceil log_2[\frac{1}{p(x_j)}] \geq \lceil log_2(n) \rceil$
+\end{enumerate}
+
+\qed
+
+\subsection*{1.3}
+Demonstrar que $log_2n$ é a entropia \textbf{máxima} de qualquer $X=\{x_1,x_2,...x_n\}$.\\ 
+Supor dado o Lema: "A função $log_2()$ é estritamente côncava". E aplicar o Teorema de Jensen: "Se $f$: $\mathbb{R} \rightarrow \mathbb{R}$ é uma função contínua estritamente côncava no intervalo I, então $\sum_{i=1}^n a_i f (x_i) \leq  f ( \sum_{i=1}^n a_i x_i )$
+\\
+\answer
+
+\begin{enumerate}
+    \item Sendo a funçao $log_2()$ côncava, usando o teorema de jensen obtemos:
+        \\ $\sum_{i=1}^n a_i log_2(x_i) \leq \sum_{i=1}^n a_i x_i$
+    \item Relacionando com a formula da entropia:
+        \\ $ a_i = p(x_i); x_i = p(x_i)^{-1}$
+    \item $\sum_{i=1}^n p(x_i)log_2(p(x_i)^{-1}) \leq log_2(\sum_{i=1}^n p(x_i)p(x_i)^{-1})$
+    \item $E(X) \leq log_2(\sum_{i=1}^n p(x_i)p(x_i)^{-1})$
+    \item $E(X) \leq log_2(\sum_{i=1}^n 1)$
+    \item $E(X) \leq log_2(n)$
+\end{enumerate}
+
+\qed
+
+\subsection*{1.4}
+Para qual conjunto $X$ essa entropia \textbf{máxima} ocorre? Demonstrar matematicamente esse fato. \\
+
+\answer \\
+Supondo um conjunto $X = \{x_1, x_2,... x_n\}$, sendo $\frac{1}{n} = p(x_1) = p(x_2) = ... = p(x_n)$, $\sum_{i=1}^np(x_i) = 1$ e $E(X) \leq log_2(n)$. Usando a formula da entropia:
+
+\begin{enumerate}
+    \item $E(X) = \sum_{i=1}^n \frac{1}{n} log_2(n)$
+    \item $E(X) = \frac{n}{n} log_2(n)$
+    \item $E(X) = log_2(n)$
+\end{enumerate}
+
+Portanto o conjunto $X$ tem a entropia máxima.
+
+\qed
+
+
+\section*{Exercício 2}
+
+\subsection*{2.1.1}
+Listar sua data de nascimento \\ 
+\answer \\
+29/07/01
+
+\subsection*{2.1.2}
+Listar o valor de $(E_0, D_0)$ em \textbf{hexadecimal}, como definimos anteriormente, para seu NUSP e sua data de nascimento.\\ \\
+\answer \\
+$(E_0, D_0): (0x11796022; 0x11796022)$ \\
+$K  : 0x0209000700010000$
+
+\subsection*{2.1.3}
+Aceitar como entrada $(E_0,D_0)$ e a subchave $K_1$, e calcular e listar em \textbf{hexadecimal} a saída da primeira iteração (round 1), $(E1,D1)$. conforme o desenho dado de 1 iteração (round). A subchave deve ser gerada com a chave $K$ definida com os seus dados. \\ 
+\answer \\
+$(E_1, D_1): (0x00ee2288; 0x32a6f73e)$ \\
+$K_1  : 0x000000010009$
+
+\subsection*{2.1.4}
+Complementar apenas o bit mais à esquerda de E0 e calcular e listar em \textbf{hexadecimal} a saída da primeira iteração (round 1), $(E_1^c ,D_1^c)$ \\
+\answer \\ 
+$(E_0^c, D_0): (0x91796022; 0x11796022)$\\
+$(E_1, D_1): (0x01ee2288; 0x76aff62e)$\\
+$K_1  : 0x000000010009$
+
+\subsection*{2.1.5}
+\textbf{Calcular} e listar o número de bits diferentes entre $(E_1,D_1)$ e $(E_1^c ,D_1^c)$ \\
+\answer \\
+
+A diferença entre $(E_1, D_1)$ e $(E_1^c, D_1^c)$ é de 7 bits
+
+\subsection*{2.2.1}
+Efetuar os mesmo passos (2) a (5) para cada iteração $j = 2,3,4,..16$, ou seja, calcular e listar o número de bits diferentes entre $E_j,D_j$e $E_j^c,D_j^c$
+
+\answer
+
+\begin{center}
+\begin{tabular}{||c|c|c|c|c|c|c||} 
+ \hline
+    $Round_j$ & subch. $K_j$ & $E_j$ & $E_j^c$ & $D_j$ & $D_j^c$ & bits diff \\ 
+ \hline
+    0 & 0x000000000000 & 0x11796022 & 0x91796022 & 0x11796022 & 0x11796022 & 1\\
+ \hline
+    1 & 0x000000010009 & 0x00ee2288 & 0x01ee2288 & 0x32a6f73e & 0x76aff62e & 7\\
+ \hline
+    2 & 0x000000200680 & 0x32a6f73e & 0x76aff62e & 0x63c30f2a & 0xbd7b26f0 & 24\\
+ \hline
+    3 & 0x000000180003 & 0x63c30f2a & 0xbd7b26f0 & 0xcc519dad & 0x286c8ce8 & 32\\
+ \hline
+    4 & 0x000000064000 & 0xcc519dad & 0x286c8ce8 & 0xde091d5e & 0x2470e4f7 & 35\\
+ \hline
+    5 & 0x000000002140 & 0xde091d5e & 0x2470e4f7 & 0x8902388e & 0xffbb0a71 & 42\\
+ \hline
+    6 & 0x000000a08000 & 0x8902388e & 0xffbb0a71 & 0xb3fc4207 & 0x22ac1cb8 & 38\\
+ \hline
+    7 & 0x000000400602 & 0xb3fc4207 & 0x22ac1cb8 & 0x3a35e3ac & 0x7b588e0a & 33\\
+ \hline
+    8 & 0x0000001c0008 & 0x3a35e3ac & 0x7b588e0a & 0x3bd3c313 & 0xcdb83d43 & 36\\
+ \hline
+    9 & 0x000000000424 & 0x3bd3c313 & 0xcdb83d43 & 0x284bd431 & 0xee94f446 & 38\\
+ \hline
+    10 & 0x000000480880 & 0x284bd431 & 0xee94f446 & 0x34799fd6 & 0xaad372a1 & 39\\
+ \hline
+    11 & 0x000000004019 & 0x34799fd6 & 0xaad372a1 & 0x4357cdb7 & 0xed95b64d & 41\\
+ \hline
+    12 & 0x000000031000 & 0x4357cdb7 & 0xed95b64d & 0x61f21e01 & 0x06ed9081 & 35\\
+ \hline
+    13 & 0x000000800120 & 0x61f21e01 & 0x06ed9081 & 0xde7ca3e3 & 0xc3da3f00 & 32\\
+ \hline
+    14 & 0x000000000a04 & 0xde7ca3e3 & 0xc3da3f00 & 0x0bd007e4 & 0xc9985cba & 32\\
+ \hline
+    15 & 0x000000500090 & 0x0bd007e4 & 0xc9985cba & 0xbe348e0f & 0x4d2d2eee & 30\\
+ \hline
+    16 & 0x00000080a004 & 0xbe348e0f & 0x4d2d2eee & 0x41078409 & 0xdd39c753 & 31\\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{2.3.1}
+Listar $K$ em \textbf{hexadecimal} \\ 
+\answer \\ \\
+$K = 0x0209000700010000$
+
+\subsection*{2.3.2}
+Aceitar como entrada $(E_0, D_0)$, como definido anteriormente, listar esses valores, e calcular a saída da primreira iteração $(round 1),(E_1, D_1)$ \\ \\ 
+\answer \\ \\
+$(E_0, D_0): (0x11796022; 0x11796022)$ \\
+$K_1  : 0x000000010009$ \\
+$(E_1, D_1): (0x00ee2288; 0x32a6f73e)$ \\
+$K_1  : 0x000000010009$
+
+\subsection*{2.3.3}
+Listar os valores da subchave $K_1, (E_1, D_1)$ em \textbf{hexadecimal} \\
+\answer \\ \\
+$(E_1, D_1): (0x00ee2288; 0x32a6f73e)$ \\
+$K_1  : 0x000000010009$
+
+\subsection*{2.3.4}
+Complementar apenas o bit mais à esquerda da \textbf{chave} $K$ (Sem alterar a entrada), e listar esse valor em \textbf{hexadecimal} \\ 
+\answer \\ \\
+$K = 0x8209000700010000$
+
+\subsection*{2.3.5}
+Calcular a subchave $K_1^c$ e a saída da primeira iteração (round 1), $(E_1^c, D_1^c)$ \\ \\
+\answer \\ \\
+$(E_1^c, D_1^c): (0x00ee2288; 0xb2a6e77e)$ \\
+$K_1^c  : 0x000010010009$
+
+\subsection*{2.3.6}
+Listar os valores $K_1^c, (E_1^c, D_1^c)$ em \textbf{hexadecimal} \\
+\answer \\ \\
+$(E_1^c, D_1^c): (0x00ee2288; 0xb2a6e77e)$ \\
+$K_1^c  : 0x000010010009$
+
+\subsection*{2.3.6}
+Listar os valores $K_1^c, (E_1^c, D_1^c)$ em \textbf{hexadecimal} \\
+\answer \\ \\
+A diferença entre $(E_1, D_1)$ e $(E_1^c, D_1^c)$ é de 3 bits
+
+\subsection*{2.4.1}
+Efetuar os mesmos passos (2) a (7) para cada iteração $j = 2,3,4,..16$, ou seja, calcular e listar $K_j$ em hexadecimal e o número de bits diferentes entre $(E_j,D_j)e (E_j^c,D_j^c)$ \\
+\answer
+
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{||c|c|c|c|c|c|c|c||} 
+ \hline
+    $R_j$ & $K_j$ & $K_j^c$ & $E_j$ & $E_j^c$ & $D_j$ & $D_j^c$ & bits diff \\ 
+ \hline
+    1 & 0x000000010009 & 0x000010010009 & 0x00ee2288 & 0x00ee2288 & 0x32a6f73e & 0xb2a6e77e & 3\\
+ \hline
+    2 & 0x000000200680 & 0x004000200680 & 0x32a6f73e & 0xb2a6e77e & 0x63c30f2a & 0x3065e338 & 18\\
+ \hline
+    3 & 0x000000180003 & 0x000100180003 & 0x63c30f2a & 0x3065e338 & 0xcc519dad & 0x0ac7d791 & 30\\
+ \hline
+    4 & 0x000000064000 & 0x000001064000 & 0xcc519dad & 0x0ac7d791 & 0xde091d5e & 0x2eb32c77 & 30\\
+ \hline
+    5 & 0x000000002140 & 0x010000002140 & 0xde091d5e & 0x2eb32c77 & 0x8902388e & 0x0d68f79c & 29\\
+ \hline
+    6 & 0x000000a08000 & 0x000080a08000 & 0x8902388e & 0x0d68f79c & 0xb3fc4207 & 0x10a4345b & 30\\
+ \hline
+    7 & 0x000000400602 & 0x100000400602 & 0xb3fc4207 & 0x10a4345b & 0x3a35e3ac & 0x26c7b20c & 29\\
+ \hline
+    8 & 0x0000001c0008 & 0x0000001c0008 & 0x3a35e3ac & 0x26c7b20c & 0x3bd3c313 & 0x8e5a95d4 & 30\\
+ \hline
+    9 & 0x000000000424 & 0x002000000424 & 0x3bd3c313 & 0x8e5a95d4 & 0x284bd431 & 0xc4488c24 & 30\\
+ \hline
+    10 & 0x000000480880 & 0x000400480880 & 0x284bd431 & 0xc4488c24 & 0x34799fd6 & 0xf569044f & 26\\
+ \hline
+    11 & 0x000000004019 & 0x400000004019 & 0x34799fd6 & 0xf569044f & 0x4357cdb7 & 0xc4bc8f1e & 29\\
+ \hline
+    12 & 0x000000031000 & 0x008000031000 & 0x4357cdb7 & 0xc4bc8f1e & 0x61f21e01 & 0x874ed128 & 35\\
+ \hline
+    13 & 0x000000800120 & 0x000002800120 & 0x61f21e01 & 0x874ed128 & 0xde7ca3e3 & 0x7c8f81e0 & 32\\
+ \hline
+    14 & 0x000000000a04 & 0x200000000a04 & 0xde7ca3e3 & 0x7c8f81e0 & 0x0bd007e4 & 0x3c6a71e5 & 29\\
+ \hline
+    15 & 0x000000500090 & 0x000000500090 & 0x0bd007e4 & 0x3c6a71e5 & 0xbe348e0f & 0x7ca6e7a4 & 31\\
+ \hline
+    16 & 0x00000080a004 & 0x00004080a004 & 0xbe348e0f & 0x7ca6e7a4 & 0x41078409 & 0x30797def & 36\\
+\hline
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+\subsection*{2.5.1}
+Supondo a chave $K$ permaneça fixa, o resultado numérico que V obteve indica algum nível de dificuldade de um mal-intencionado calcular a entrada $(E_0,D_0)$ corresponde a uma dada saída de 64 bits? Por que? \\
+
+\answer \\
+Supondo que a chave $K$ permaneça fixa V vai obter vários resultados numéricos criptografados por uma mesma chave, o problema que isso causa é que se V testar a mesma chave em várias mensagens ele vai conseguir decriptografar todas.
+
+\subsection*{2.5.2}
+A mesma pergunta, se fosse só uma iteração? \\
+
+\answer \\
+Sendo apenas uma iteração, a mensagem criptografada vai estar mais vulnerável ainda. O nível de entropia vai estar bem baixa, consequentemente a difusão e a confusão também, então duas mensagens criptografada com a mesma chave vão estar bem parecidas.
+
+\subsection*{2.5.3}
+Supondo que a entrada $(E_0,D_0)$ permaneça fixa, o resultado numérico que V obteve indica algum nível de dificuldade de um mal-intencionado calcular a chave $K$ correspondente a uma dada saída de 64 bits? Por quê? \\
+
+\answer \\
+Supondo que a entrada $(E_0,D_0)$ permaneça fixa V vai obter vários resultados numéricos criptografados por chaves diferentes, o problema que isso causa é que várias chaves vão conseguir decriptografar a mensagem.
+
+\subsection*{2.5.4}
+A mesma pergunta, se fosse só uma iteração? \\
+
+\answer \\
+Sendo apenas uma iteração, a mensagem criptografada vai estar mais vulnerável já que nível de entropia vai estar bem baixa então uma mensagem criptografada com chaves diferentes vão estar bem parecidas.
+
+\subsection*{2.5.5}
+Qual a relação do resultado numérico que V obteve com o conceito de Entropia de Informação segundo Shannon? \\ 
+
+\answer \\ 
+A relação que foi obtida é que a entropia (confusão e difusão) tem uma grande importância em proteger as informações das mensagens e das chaves
+
+\end{document}
