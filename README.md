@@ -19,4 +19,5 @@ Perdi os códigos em todas as matérias com \*
 
 * Semestre 4
     * MAC0336 (Criptografia para Segurança de Dados)
-    * REDES 
+    * REDES
+    * SO (Sistemas Operacionais)
