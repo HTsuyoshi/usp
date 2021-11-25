@@ -1,0 +1,199 @@
+%Baseado em https://www.overleaf.com/latex/templates/cse-3500-algorithms-and-complexity-homework-template/wrfwdhfzpnqc
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor} \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{xspace}
+
+\usepackage[brazilian]{babel}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{MAC0336}
+\newcommand\prof{Routo Terada}
+\newcommand\hwnumber{1}                   % <-- homework number
+\newcommand\NUSP{11796083}                % <-- NUSP
+\newcommand\sname{Henrique Tsuyoshi Yara}               % <-- Name
+
+\newcommand\answer{\textbf{Resolução.}\xspace}
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\sname \\ \NUSP}
+\chead{\textbf{\Large Prova \hwnumber}}
+\rhead{\course\, - \prof \\ \today}       % \today deixa o dia de hoje automaticamente
+\lfoot{}
+\cfoot{}
+\rfoot{\center\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+% Use \section*{} em vez de \section{} para evitar que o Latex numere as
+% seções. Isso evita que fique redundante "1 Exercício 1", por exemplo.
+\section*{Exercício 1}
+\subsection*{1.A.1}
+\answer \\
+    \textbf{Parâmetros do} $Decripto$ \\
+
+\begin{enumerate}
+    \item $64$ é o número de bits em cada variável (i.e., cada posição de memória);
+    \item $12$ é o número de iterações (rounds);
+    \item $8$ é o número de bytes na chave.
+
+\end{enumerate}
+
+\subsection*{1.A.2}
+\answer \\
+    \textbf{Operações básicas}:
+
+\begin{enumerate}
+    \item $v \boxplus u$ é a soma dos inteiros v,u de 64 bits, resultando um valor de 64 bits ($i.e.$, soma $\mod$ 264);
+    \item $v \oplus u$ é o ou-exclusivo (XOR) de v,u de 64 bits, resultando um valor de 64 bits;
+    \item $v \gg t$ é o deslocamento circular (i.e., rotação) de t posições para a direita dos bits em v.
+\end{enumerate}
+
+\subsection*{1.A.3}
+\answer \\
+    \textbf{Algoritmo} Decripto \\
+    \textbf{Entrada}: chave de 8 bytes, texto criptografado de $2 \times 64$ bits $(A, B)$; \\
+    \textbf{Saída}: legível de $2 \times 64$ bits $(A, B)$; \\
+
+\begin{enumerate}
+    \item Calcular $2 \times 12 + 2$ subchaves $K_0, K_1, K_2,... K_{2 \times 12 + 1}$ (* Usando o algoritmo dado *)
+
+    \item \textbf{para} $i = K_{2 \times 12 + 1}, K_{2 \times 12}, K_{2 \times 11 + 1},...K_{0}$: \\
+        Achar $K_i^{-1}$, tal que \\
+        $K_i \boxplus K_i^{-1} == 0$ \\
+        $\overline{K_i} \leftarrow K_i^{-1}$
+
+    \item \textbf{para} $j = 12, 11, 10,...1$ \textbf{faça}: \\
+        $B \leftarrow ((A \boxplus \overline{K_{2j+1}}) \gg A) \oplus A$;$A \leftarrow ((A \boxplus \overline{K_{2j}}) \gg B) \oplus B$
+    \item $B \leftarrow B \boxplus \overline{K_1}$;$A \leftarrow A \boxplus \overline{K_0}$
+    \item A saída é o valor (A, B)
+\end{enumerate}
+
+\subsection*{1.B}
+    Sendo $(A', B')$ os textos ilegíveis, $(A,B)$ os textos legíveis e $overline{K_0}, overline{K_1}, overline{K_2},...overline{K_{2 \times 12 + 1}}$ as subchaves complementares às subchaves $K_0, K_1, K_2,... K_{2 \times 12 + 1}$ em relação à $\boxplus$: \\
+    Provando uma iteração:
+
+\begin{enumerate}
+    \item $B' = ((B \oplus A) \ll A) \boxplus K_{2_j + 1}$
+    \item $B' \boxplus  \overline{K_{2_j + 1}} = (((B \oplus A) \ll A) \boxplus K_{2_j + 1}) \boxplus  \overline{K_{2_j + 1}}$
+    \item $B' \boxplus \overline{K_{2_j + 1}} = ((B \oplus A) \ll A) $
+    \item $(B' \boxplus \overline{K_{2_j + 1}}) \gg A = ((B \oplus A) \ll A) \gg A$
+    \item $(B' \boxplus \overline{K_{2_j + 1}}) \gg A = (B \oplus A)$
+    \item $((B' \boxplus \overline{K_{2_j + 1}}) \gg A) \oplus A = (B \oplus A) \oplus A$
+    \item $((B' \boxplus \overline{K_{2_j + 1}}) \gg A) \oplus A = B$
+\end{enumerate}
+
+\begin{enumerate}
+    \item $A' = ((A \oplus B) \ll B) \boxplus K_{2j}$
+    \item $A' \boxplus \overline{K_{2j}} = (((A \oplus B) \ll B) \boxplus K_{2j}) \boxplus \overline{K_{2j}}$
+    \item $A' \boxplus \overline{K_{2j}} = ((A \oplus B) \ll B)$
+    \item $(A' \boxplus \overline{K_{2j}}) \gg B = ((A \oplus B) \ll B) \gg B$
+    \item $(A' \boxplus \overline{K_{2j}}) \gg B = (A \oplus B)$
+    \item $((A' \boxplus \overline{K_{2j}}) \gg B) \oplus B = (A \oplus B) \oplus B$
+    \item $((A' \boxplus \overline{K_{2j}}) \gg B) \oplus B = A$
+\end{enumerate}
+
+    A operação inicial antes das iterações: \\
+\begin{enumerate}
+    \item $B' = B \boxplus K_1$
+    \item $(B' \boxplus \overline{K_1}) = B \boxplus K_1 \boxplus \overline{K_1}) $
+    \item $(B' \boxplus \overline{K_1}) = B \boxplus K_1$
+\end{enumerate}
+
+\begin{enumerate}
+    \item $A' = A \boxplus K_0$
+    \item $(A' \boxplus \overline{K_0}) = A \boxplus K_0 \boxplus \overline{K_0}) $
+    \item $(A' \boxplus \overline{K_0}) = B \boxplus K_0$
+\end{enumerate}
+\qed
+
+\subsection*{2}
+\subsection*{2.1}
+Calcular $T$ para $p = 7$, $S = 2$, e executar o Crip para $k = 3, x = 2$, obtendo $(y,z)$ \\
+\answer \\
+T = 2, y = 6, z = 2
+
+\subsection*{2.2}
+Justifique porque $k = 0$, e $k = 1$ devem ser evitados no Passo (1) do Crip. \\
+\answer \\
+    $K = 0$ deve ser evitado, pois $z = xT^0$ então $z = x$ o texto vai ser enviado sem estar criptografado. \\
+    $K = 1$ deve ser evitado, pois $T$ é público e é fácil descobrir $T^{-1}$ e consequentemente descobrir $x$.
+
+\subsection*{2.3}
+\answer \\
+\textbf{Algoritmo} Decriptografia do Crip \\
+\textbf{Entrada} $(y, z)$ criptografados da alice \\
+
+\begin{enumerate}
+    \item $y \leftarrow y^{-1}$
+    \item $y \leftarrow y^{S}$
+    \item $x \leftarrow z \times y$
+    \item A saída é o valor de $x$
+\end{enumerate}
+
+\subsection*{2.4}
+\answer \\
+    Executando o algoritmo obtenho $x = 2$.
+
+\subsection*{2.5}
+\answer \\
+
+\begin{enumerate}
+    \item $z \times y^-S \mod p$
+    \item $xT^k \times y^-S \mod p$
+    \item $x(g^S)^k \times y^-S \mod p$
+    \item $x(g^S)^k \times (g^k)^-S \mod p$
+    \item $x(g^S)^k \times g^{-kS} \mod p$
+    \item $x(g^{Sk}) \times g^{-kS} \mod p$
+    \item $xg^{Sk} \times g^{-kS} \mod p$
+    \item $x \mod p$
+\end{enumerate}
+
+\subsection*{2.6}
+\answer \\
+    Ele é mais rápido, pois ele consiste em uma exponenciação e uma inversa, enquanto a criptogrfia consiste em duas exponenciações.
+
+\subsection*{2.7}
+\answer \\
+    A definição do problema que faz essa criptografia computacionalmente segura é o Problema do Logaritmo Discreto. Se esse problema fosse de fácil solução o atacante poderia descobrir o valor de $k$ e assim descobrir o valor de $T^k$ e descobrir x com a equação $z(T^-k)$.
+
+\subsection*{2.8}
+\answer \\
+    A razão de existir o NONCE k no Passo 1 é que caso o atacante consiga $x_1$ e $x_2$ que foram criptografados com um mesmo $k$, é possível obter $x_2$ usando $x_1$ na equação: \\
+    $\frac{z_1}{z_2} = \frac{x_1}{x_2}$
+
+\subsection*{2.9}
+\answer \\
+
+\subsection*{2.10}
+\answer \\
+    Autenticação do Rementente de Y é o destinatário ter a certeza de quem foi que mandou a mensagem. Ela não garante a autenticação do remetente, pois qualquer um pode forjar e se passar por Beto.
+
+\subsection*{2.11}
+\answer \\
+    Autenticação do Destinatário de Y é apenas a pessoa que recebeu a informação consiga ler a mensagem. Ela garante a Autenticação do Destinatário pois, a chave secreta S é conhecida apenas pela Alice.
+
+\subsection*{2.12}
+\answer \\
+
+\end{document}
