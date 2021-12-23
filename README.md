@@ -19,5 +19,5 @@ Perdi os códigos em todas as matérias com \*
 
 * Semestre 4
     * MAC0336 (Criptografia para Segurança de Dados)
-    * REDES
+    * REDES ([EP 2](https://github.com/HTsuyoshi/redes-ep2-typerace)
     * SO (Sistemas Operacionais)
