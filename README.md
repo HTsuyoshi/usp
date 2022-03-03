@@ -1,23 +1,41 @@
 # Usp
 
-Perdi os códigos em todas as matérias com \* 
+Perdi ou não teve códigos em todas as matérias com \* 
 
 * Semestre 1
+    * Cálculo I\*
+    * FSI (Fundamentos de Sistemas de Informação)\*
     * IP (Introdução à Programação)
-    * FSI (Fundamentos de Sistemas de Informação)*
+    * RP I (Resolução de Problemas)\*
+    * Sociedade, Multiculturalismo e Direitos - Direitos Humanos e Multiculturalismoz\*
+    * TADI (Tratamento e Análise de Dados/Informações)\*
 
 * Semestre 2
     * AEDI (Algoritmos e Estruturas de dados I)
-    * IAA (Introdução à Análise de Algoritmos, eu perdi meus códigos)\*
+    * Cálculo II\*
+    * IAA (Introdução à Análise de Algoritmos)\*
+    * MD I (Matemática Discreta I)\*
+    * MVGA (Matrizes, Vetores e Geometria Analítica)\*
 
 * Semestre 3
-    * AEDII (Alg. e Estr. de dados II)
+    * AED II (Alg. e Estr. de dados II)
     * COO (Computação Orientada à Objetos)
     * DPI (Desafios de Programação I,os exercícios estão em [programming-challenges](https://github.com/HTsuyoshi/programming-challenges))
-    * OACI (Organização e Arquitetura de Computadores I)
+    * IAEC (Introdução à Administração e Economia para Computação)\*
+    * IE (Introdução à Estatísitca)\*
     * ITC (Introdução à Teoria da Computação)
+    * OAC I (Organização e Arquitetura de Computadores I)
 
 * Semestre 4
+    * BD I (Banco de Dados I)\*
     * MAC0336 (Criptografia para Segurança de Dados)
-    * REDES ([EP 2](https://github.com/HTsuyoshi/redes-ep2-typerace))
+    * MQAAE (Métodos Quantitativos Aplicados à Administração de Empresas I)\*
+    * Redes de Computadores ([EP 2](https://github.com/HTsuyoshi/redes-ep2-typerace))
     * SO (Sistemas Operacionais)
+    * OAC II (Organização e Arquitetura de Computadores II)\*
+
+* Semestre 5 (Currently)
+    * IHC (Análise, Projeto e Interface Humano-Computador)
+    * IA (Inteligência Artificial)
+    * BD II (Banco de Dados II)
+    * DSID (Desenvolvimento de Sistemas de Informação Distribuídos)
