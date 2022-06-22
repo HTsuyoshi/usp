@@ -62,25 +62,38 @@ Comunicação Persistente:
 ```
 ```
 
-10. Quais opera ̧c ̃oes s ̃ao permitidas em sockets, segundo o POSIX?
+10. Quais operações são permitidas em sockets, segundo o POSIX?
 
 ```
+	- SOCKET (Cria um novo ponto de comunicação)
+	- BIND (Especifica um endereço local (IP + porta) ao socket)
+	- LISTEN (Diz ao SO o nùmero máximo de pedidos de conexão a serem recebidos)
+	- ACCEPT (Bloqueia o executor até receber um pedido de estabelecimento de conexão)
+	- CONNECT (Tenta estabelecer uma conexão)
+	- SEND (Envia dados pela conexão)
+	- RECEIVE (Recebe dados pela conexão)
+	- CLOSE (Libera a conexão)
 ```
 
-11. A necessidade de independˆencia de hardware e plataforma levou ao surgimento de um padr ̃ao para troca de mensagens. Que padr ̃ao  ́e esse?
+11. A necessidade de independência de hardware e plataforma levou ao surgimento de um padrão para troca de mensagens. Que padrão é esse?
 
 ```
+	- Message-Passing Interface (MPI)
 ```
 
-12. Por ser projetada para aplica ̧c ̃oes paralelas, a Interface de Passagem de Mensagens (MPI)  ́e mais adequada para que tipo de comunica ̧c ̃ao?
+12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é ** mais adequada ** para que tipo de comunicação?
 
 ```
+	- Comunicação Transiente
 ```
 
-13. Como podemos ter um sistema que ofere ̧ca comunica ̧c ̃ao orientada a mensagens de forma ass ́ıncrona e persistente?
+13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assı́ncrona e persistente?
 
 ```
+	- **Filas** pelo middleware
+	- Filas correspondem a *buffers* em servidores de comunicação
 ```
+
 
 14. Pensando em como funciona a atribui ̧c ̃ao de n ́umeros de telefone, podemos considerar um n ́umero de telefone um identificador? Por que? Um n ́umero de telefone n ̃ao pode ser consi- derando um identificador, pois:
 
