@@ -144,7 +144,7 @@ A alternativa:
 18. Hard link e soft link são exemplos de que tipo de nomes?
 
 ```
-O Hard link e o Soft link são exemplos do tipo de nome a, pois eles a
+O Hard link e o Soft link são exemplos do tipo de Nomes Estruturados.
 ```
 
 19. Sistemas de arquivos distribuídos são um exemplo de sistemas que usam que tipo de nomes?
