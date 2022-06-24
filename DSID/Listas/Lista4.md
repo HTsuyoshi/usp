@@ -1,30 +1,30 @@
 # Lista 1
 
-1. Temporizadores (clocks) em diferentes computadores podem ficar fora de sincronia, por estes oscilarem a taxas levemente diferentes. Que nome damos a diferença observada quando da leitura de dois clocks?
+1. Temporizadores (clocks) em diferentes computadores podem ficar fora de sincronia, por estes oscilarem a taxas levemente diferentes. Que nome damos à diferença observada quando da leitura de dois clocks?
 
 ```
 O nome que damos a diferença observada quando da leitura de dois clocks é dada por Clock skew
 ```
 
-2. Para determinar o hor ́ario atual, um processo pode acessar um servidor de tempo (em outra maquina). O problema, ent ̃ao,  ́e como incluir no c ́alculo o tempo gasto no envio, processamento, e devolu ̧c ̃ao da requisicao feita. Nesse sentido, que protocolo  ́e usado para estimar o atraso de tempo entre duas maquinas?
+2. Para determinar o horário atual, um processo pode acessar um servidor de tempo (em outra máquina). O problema, então, é como incluir no cálculo o tempo gasto no envio, processamento, e devolução da requisição feita. Nesse sentido, que protocolo é usado para estimar o atraso de tempo entre duas máquinas?
 
 ```
 O protocolo que é usado para estimar o atraso de tempo entre duas máquinas é o protocolo NTP (Network Time Protocol)
 ```
 
-3. Quando sincronizamos os clocks (de fato, seus contadores) de dois computadores, uma possibilidade  ́e adiantarmos o clock do mais atrasado. Por que n ̃ao podemos atrasar o clock do mais adiantado, ou seja, por que n ̃ao podemos fazer ele "voltar no tempo"?
+3. Quando sincronizamos os clocks (de fato, seus contadores) de dois computadores, uma possibilidade é adiantarmos o clock do mais atrasado. Por que não podemos atrasar o clock do mais adiantado, ou seja, por que não podemos fazer ele “voltar no tempo”?
 
 ```
 Não podemos atrasar o clock do mais adiantado, pois isso poderia criar um risco de ter um arquivo com uma data anterior à sua fonte
 ```
 
-4. Quando sincronizamos a clock (de fato, seu contador) de um computador em rela ̧c ̃ao a alguma referˆencia, n ̃ao podemos reduzir seu valor, ou seja, n ̃ao podemos “voltar no tempo”. Como fazer ent ̃ao se o clock desse computador estiver a frente do clock de referencia?
+4. Quando sincronizamos a clock (de fato, seu contador) de um computador em relação a alguma referência, não podemos reduzir seu valor, ou seja, não podemos “voltar no tempo”. Como fazer então se o clock desse computador estiver à frente do clock de referência?
 
 ```
 Caso o clock desse computador estiver a frente do clock de referência o clock deve ser desacelerado até que a redução desejada seja gradualmente atingida
 ```
 
-5. Dos algoritmos de exclusão mútua vistos (centralizado, distribu ́ıdo (Ricart & Agrawala), token ring e descentralizado), qual funciona mesmo quando a identidade dos membros do grupo n ̃ao  ́e conhecida a priori?
+5. Dos algoritmos de exclusão mútua vistos (centralizado, distribuı́do (Ricart & Agrawala), token ring e descentralizado), qual funciona mesmo quando a identidade dos membros do grupo não é conhecida a priori?
 
 ```
 Não tenho certeza.
@@ -32,7 +32,7 @@ Não tenho certeza.
 Dos algoritos de exclusão mútua, o algoritmo que funciona mesmo quando a identidade dos membros do grupo não é conhecida é o algoritmo de comparação
 ```
 
-6. Comparando o algoritmo de exclus ̃ao m ́utua centralizado, visto em sala, com o algoritmo distribu ́ıdo proposto por Ricart & Agrawala, qual deles  ́e mais eficiente e mais tolerante a falhas?
+6. Comparando o algoritmo de exclusão mútua centralizado, visto em sala, com o algoritmo distribuı́do proposto por Ricart & Agrawala, qual deles é mais eficiente e mais tolerante a falhas?
 
 ```
 Não tenho certeza.
@@ -40,7 +40,7 @@ Não tenho certeza.
 Comparando o algoritmo de exclisão mútua centralizado e o algoritmo distribuído proposto por Ricard & Agrawala, o mais eficiente e mais tolerante a falhas é o algoritmo distribuído! Pois no algoritmo centralizado, caso o coordenador caia os outro processos não vão conseguir se comunicar entre si, enquanto no algoritmo distribuído é possivel continnuar se comunicando com outros processos. E o algoritmo centralizado precisa executar todos os processos um de cada vez, dessa forma criando um gargalo de entrada e saída, diferente do algoritmo centralizado o algoritimo distribuído vai dividir todo esse trabalho para muitos outros processos, dessa forma criando uma eficiência maior.
 ```
 
-7. Descreva o funcionamento do algoritmo de elei ̧c ̃ao de bully.
+7. Descreva o funcionamento do algoritmo de eleição de bully.
 
 O algorito de bully se inicia quanod algum processo percebe que o coordenador não está mais respondendo a requisições.
 
@@ -58,7 +58,7 @@ Se um dos seus nós com maior id responder, esse assume
 
 Depois que o processo estiver pronto para assumir, anuncia a sua liderança para todos os outros processos.
 
-8. Descreva o funcionamento do algoritmo de elei ̧c ̃ao em anel
+8. Descreva o funcionamento do algoritmo de eleição em anel.
 
 A prioridade dos processos é obtida organizando-os em um anel lógico
 
