@@ -1,4 +1,4 @@
-# Lista 1
+# Lista 4
 
 1. Temporizadores (clocks) em diferentes computadores podem ficar fora de sincronia, por estes oscilarem a taxas levemente diferentes. Que nome damos à diferença observada quando da leitura de dois clocks?
 
