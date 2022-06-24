@@ -122,10 +122,13 @@ Comunicação Persistente:
 
 17. O sistema de nomes utilizado no DNS é estruturado e a resolução de nomes DNS é organizada simultaneamente por diversos paı́ses e organizações. Ainda assim, não é possı́vel afirmar que um nome associado a um domı́nio como, por exemplo, https://www.un.org/, está relacionado a uma entidade em um paı́s especı́fico. Qual a alternativa abaixo que melhor explica essa constatação?
 
- - (a) Ainda que a hierarquia de nomes seja gerenciada por paı́ses diferentes, nada se pode dizer sobre a localização geográfica do ponto de acesso da entidade referenciada por um nome
- - (b) O endereço https://www.un.org/ se refere a um organismo internacional e, por isso, seu servidor encontra-se em águas internacionais
- - (c) Um órgão de atribuição de nomes DNS como o registro.br só pode atribuir nomes .com.br a entidades que estejam em solo nacional
- - (d) Uma vez atribuı́do o nome a uma entidade de um paı́s, essa entidade não pode ser movida para outro paı́s
+(a) Ainda que a hierarquia de nomes seja gerenciada por paı́ses diferentes, nada se pode dizer sobre a localização geográfica do ponto de acesso da entidade referenciada por um nome
+
+(b) O endereço https://www.un.org/ se refere a um organismo internacional e, por isso, seu servidor encontra-se em águas internacionais
+
+(c) Um órgão de atribuição de nomes DNS como o registro.br só pode atribuir nomes .com.br a entidades que estejam em solo nacional
+
+(d) Uma vez atribuı́do o nome a uma entidade de um paı́s, essa entidade não pode ser movida para outro paı́s
 
 ```
 A alternativa: 
