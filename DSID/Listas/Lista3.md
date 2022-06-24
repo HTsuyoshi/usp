@@ -9,15 +9,13 @@ O Internet Protocol se encaixa na camada de rede.
 2. Quais as camadas do modelo OSI, e qual o propósito de cada uma?
 
 ```
-As camadas do modelo OSI são:
-
 - Camada de Aplicação: Tornou-se o lugar par aplicações e protocolos que não se encaixam nas camadas abaixo (email, transferência de arquivos, etc...).
-- Camada de Apresentação: Trata do significado dos bits, definindo registros e seus campos, e permitindo que o emissor notifique o receptor do formato de cada registro
-- Camada de Seção: Controle de diálogo, identificando qual parte está falando, e fornecendo sincronização. Sequer presente na suíte do TCP/IP. Uma suíte de protocolo (ou pilha de protocolo) é a coleção de protocolos usadas em um sistema em particular
-- Camada de Transporte: Serviços para estabelecimento de comunicação confiável (entrega da mensagem sem perda). Ex: TCP, UDP. Quebra da mensagem da camada de aplicação em pedaços para transmissão, numerando-os e então os enviando
+- Camada de Apresentação: Trata do significado dos bits, definindo registros e seus campos, e permitindo que o emissor notifique o receptor do formato de cada registro.
+- Camada de Seção: Controle de diálogo, identificando qual parte está falando, e fornecendo sincronização. Sequer presente na suíte do TCP/IP. Uma suíte de protocolo (ou pilha de protocolo) é a coleção de protocolos usadas em um sistema em particular.
+- Camada de Transporte: Serviços para estabelecimento de comunicação confiável (entrega da mensagem sem perda). Ex: TCP, UDP. Quebra da mensagem da camada de aplicação em pedaços para transmissão, numerando-os e então os enviando.
 - Camada de Rede: Responsável pelo roteamento (Como escolher o melhor caminho entre emissor e receptor) Ex: Pacotes IP. Em muitos sistemas distribuídos, a interface de mais baixo nível é a interface de rede.
 - Camada de Enlace: Agrupa os bits em unidades (frames), verificando se cada frame é corretamente recebida. Coloca um conjunto de bits no final e início de cada frame, para marcá-los, alem de um checksum para detecção de erros. Quando uma frame chega, o receptor calcula o checksum e compara ao que está na frame. Se eles não batem, ele pede ao emissor para retransmitir a frame. Frames recebem números sequenciais em seu cabeçalho, para identificação.
-- Camada de Física: Transmite bits (Quantos volts usar para cada, quantos bits/segundo enviar, etc)
+- Camada de Física: Transmite bits (Quantos volts usar para cada, quantos bits/segundo enviar, etc).
 ```
 
 3. Dê exemplos de protocolos da camada de Aplicação do modelo OSI
@@ -29,23 +27,26 @@ Exemplos de protocolos da camada de Aplicação do modelo OSI podem ser: HTTP, F
 4. O que são as Chamadas de Procedimentos Remotos (RPC)?
 
 ```
-As chamadas de Procedimentos Remotos permite que programas chamem procedimentos em outras máquinas, dessa forma podem esconder a comunicação entre chamador & chamado
+As chamadas de Procedimentos Remotos permite que programas chamem procedimentos em outras máquinas, dessa forma podem esconder a comunicação entre chamador & chamado.
 ```
 
 5. Sistemas de e-mail são exemplos tı́picos de qual tipo de comunicação?
 
 ```
-
+São exemplos de comunicação síncrona.
 ```
 
-6. Defina comunicação assı́ncrona e comunicação sı́ncrona. Dê exemplos.
+6. Defina comunicação assíncrona e comunicação sı́ncrona. Dê exemplos.
 
 ```
-Acho que falta algo
+A comunicação assíncrona: 
 
-A comunicação assíncrona: O cliente envia uma requisição para o servidor, e o servidor retorna imediatamente uma resposta como acknowledge para que o cliente possa continuar o seu processo
+    - O emissor continua seu trabalho imediatamente após enviar a mensagem.
+    - Esta é temporariamente armazenada no *middleware*
 
 A comunicação síncrona:
+
+    - O emissor é bloqueado até ter certeza de que sua requisição foi aceita.
 ```
 
 7. Defina comunicação persistente e comunicação transiente. Dê exemplos.
@@ -53,10 +54,14 @@ A comunicação síncrona:
 ```
 Comunicação Transiente:
 
-- É um modelo simples orientado a mensagens oferecido pela camada de transporte
-- Um ponto de c
+    - O *middleware* armazena a mensagem somente enquanto o emissor e receptor estiverem executando.
+    - Ela descarta a mensagem se ela não puder ser encaminhada para o destinatário ou ao próximo servidor.
 
 Comunicação Persistente:
+
+    - A mensagem é armazenada no *middleware* de comunicação pelo tempo que for necessário para que seja entregue.
+    - Assim, a aplicação remetente não precisa continuar sua execução após o envio da mensagem.
+    - Nem a aplicação receptora precisa estar rodando quando a mensagem é enviada.
 ```
 
 8. Um programa que faz uso de RPC para invocar um método cuja implementação se encontra em outro computador interage, na máquina em que este programa está rodando, com um determinado componente do middleware. Que nome tem esse componente?
@@ -74,33 +79,33 @@ Comunicação Persistente:
 10. Quais operações são permitidas em sockets, segundo o POSIX?
 
 ```
-	- SOCKET (Cria um novo ponto de comunicação)
-	- BIND (Especifica um endereço local (IP + porta) ao socket)
-	- LISTEN (Diz ao SO o nùmero máximo de pedidos de conexão a serem recebidos)
-	- ACCEPT (Bloqueia o executor até receber um pedido de estabelecimento de conexão)
-	- CONNECT (Tenta estabelecer uma conexão)
-	- SEND (Envia dados pela conexão)
-	- RECEIVE (Recebe dados pela conexão)
-	- CLOSE (Libera a conexão)
+- SOCKET (Cria um novo ponto de comunicação)
+- BIND (Especifica um endereço local (IP + porta) ao socket)
+- LISTEN (Diz ao SO o nùmero máximo de pedidos de conexão a serem recebidos)
+- ACCEPT (Bloqueia o executor até receber um pedido de estabelecimento de conexão)
+- CONNECT (Tenta estabelecer uma conexão)
+- SEND (Envia dados pela conexão)
+- RECEIVE (Recebe dados pela conexão)
+- CLOSE (Libera a conexão)
 ```
 
 11. A necessidade de independência de hardware e plataforma levou ao surgimento de um padrão para troca de mensagens. Que padrão é esse?
 
 ```
-	- Message-Passing Interface (MPI)
+- Message-Passing Interface (MPI)
 ```
 
 12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é ** mais adequada ** para que tipo de comunicação?
 
 ```
-	- Comunicação Transiente
+- Comunicação Transiente
 ```
 
 13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assı́ncrona e persistente?
 
 ```
-	- **Filas** pelo middleware
-	- Filas correspondem a *buffers* em servidores de comunicação
+- **Filas** pelo middleware
+- Filas correspondem a *buffers* em servidores de comunicação
 ```
 
 
