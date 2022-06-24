@@ -3,25 +3,25 @@
 1. Temporizadores (clocks) em diferentes computadores podem ficar fora de sincronia, por estes oscilarem a taxas levemente diferentes. Que nome damos à diferença observada quando da leitura de dois clocks?
 
 ```
-O nome que damos a diferença observada quando da leitura de dois clocks é dada por Clock skew
+O nome que damos a diferença observada quando da leitura de dois clocks é dada por Clock skew.
 ```
 
 2. Para determinar o horário atual, um processo pode acessar um servidor de tempo (em outra máquina). O problema, então, é como incluir no cálculo o tempo gasto no envio, processamento, e devolução da requisição feita. Nesse sentido, que protocolo é usado para estimar o atraso de tempo entre duas máquinas?
 
 ```
-O protocolo que é usado para estimar o atraso de tempo entre duas máquinas é o protocolo NTP (Network Time Protocol)
+O protocolo que é usado para estimar o atraso de tempo entre duas máquinas é o protocolo NTP (Network Time Protocol).
 ```
 
 3. Quando sincronizamos os clocks (de fato, seus contadores) de dois computadores, uma possibilidade é adiantarmos o clock do mais atrasado. Por que não podemos atrasar o clock do mais adiantado, ou seja, por que não podemos fazer ele “voltar no tempo”?
 
 ```
-Não podemos atrasar o clock do mais adiantado, pois isso poderia criar um risco de ter um arquivo com uma data anterior à sua fonte
+Não podemos atrasar o clock do mais adiantado, pois isso poderia criar um risco de ter um arquivo com uma data anterior à sua fonte.
 ```
 
 4. Quando sincronizamos a clock (de fato, seu contador) de um computador em relação a alguma referência, não podemos reduzir seu valor, ou seja, não podemos “voltar no tempo”. Como fazer então se o clock desse computador estiver à frente do clock de referência?
 
 ```
-Caso o clock desse computador estiver a frente do clock de referência o clock deve ser desacelerado até que a redução desejada seja gradualmente atingida
+Caso o clock desse computador estiver a frente do clock de referência o clock deve ser desacelerado até que a redução desejada seja gradualmente atingida.
 ```
 
 5. Dos algoritmos de exclusão mútua vistos (centralizado, distribuı́do (Ricart & Agrawala), token ring e descentralizado), qual funciona mesmo quando a identidade dos membros do grupo não é conhecida a priori?
@@ -42,11 +42,12 @@ Comparando o algoritmo de exclisão mútua centralizado e o algoritmo distribuí
 
 7. Descreva o funcionamento do algoritmo de eleição de bully.
 
-O algorito de bully se inicia quanod algum processo percebe que o coordenador não está mais respondendo a requisições.
+```
+O algorito de bully se inicia quando algum processo percebe que o coordenador não está mais respondendo a requisições.
 
 O processo que vai começar a eleição é chamado de $$P_{k}$$ e envia uma mensagem ELECTION para todos os processos com identificadores maior que o seu:
 
-$$ P_{k+1}, P_{k+2}, \dots, P_{N-1}$$
+$$ P_{k+1}, P_{k+2}, \dots, P_{N-1} $$
 
 Se ninguém responder, $$ P_{k} $$ ganha a eleição e se torna o coordenador
 
@@ -57,9 +58,11 @@ Se um dos seus nós com maior id responder, esse assume
 - O maior sempre ganha, por isso o nome de "Algoritmo do valentão"
 
 Depois que o processo estiver pronto para assumir, anuncia a sua liderança para todos os outros processos.
+```
 
 8. Descreva o funcionamento do algoritmo de eleição em anel.
 
+```
 A prioridade dos processos é obtida organizando-os em um anel lógico
 
 - O processo com maior prioridade deve ser eleiot coordenador
@@ -85,4 +88,4 @@ O tipo da mensagem é então mudado para COORDINATOR e circulada novamente
 - Serve para informar a todos quem é o coordenador (o membro da lista com maior id) e quais são os membros do novo anel
 
 Uma vez que essa mensagem tenha circulado, ela é removida, e todos voltam ao trabalho
-
+```
