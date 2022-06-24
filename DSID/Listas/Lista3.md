@@ -95,7 +95,7 @@ Comunicação Persistente:
 - Message-Passing Interface (MPI)
 ```
 
-12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é mais adequada para que tipo de comunicação?
+12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é **mais adequada** para que tipo de comunicação?
 
 ```
 - Comunicação Transiente
@@ -104,24 +104,26 @@ Comunicação Persistente:
 13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assíncrona e persistente?
 
 ```
-- Filas pelo middleware
+- Comunicação assíncrona e persistente graças ao uso de filas pelo middleware
 - Filas correspondem a buffers em servidores de comunicação
 ```
 
 
-14. Pensando em como funciona a atribuição de números de telefone, podemos considerar um número de telefone um identificador? Por que? Um número de telefone não pode ser considerando um identificador, pois:
+14. Pensando em como funciona a atribuição de números de telefone, podemos considerar um número de telefone um identificador? Por que?
 
 ```
 
 ```
 
-15. Cite as características que um identificador precisa ter. Qual alternativa abaixo é falsa em relação à definição de identificadores?
+15. Cite as características que um identificador precisa ter. 
 
 ```
-
+- Cada identificador se refere a, no máximo, uma entidade
+- Cada entidade é referenciada por, no máximo, um identificador
+- Um identificador sempre se refere à mesma entidade (nunca é reutilizado)
 ```
 
-16. Explique como funcionam as Tabelas de Hash Distribuídas baseadas no Chord. Qual a informação incorreta sobre Tabelas de Hash Distribuídas baseadas no Chord?
+16. Explique como funcionam as Tabelas de Hash Distribuídas baseadas no Chord. 
 
 ```
 
@@ -150,5 +152,5 @@ O Hard link e o Soft link são exemplos do tipo de Nomes Estruturados.
 19. Sistemas de arquivos distribuídos são um exemplo de sistemas que usam que tipo de nomes?
 
 ```
-Sistemas de arquivos distribuídos são um exemplo de sistemas que usam o tipo de nome a
+Sistemas de arquivos distribuídos são um exemplo de sistemas que usam Implementação de Espaços de Nomes.
 ```
