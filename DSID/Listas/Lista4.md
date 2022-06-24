@@ -42,7 +42,6 @@ Comparando o algoritmo de exclisão mútua centralizado e o algoritmo distribuí
 
 7. Descreva o funcionamento do algoritmo de eleição de bully.
 
-```
 O algorito de bully se inicia quando algum processo percebe que o coordenador não está mais respondendo a requisições.
 
 O processo que vai começar a eleição é chamado de $$P_{k}$$ e envia uma mensagem ELECTION para todos os processos com identificadores maior que o seu:
@@ -58,11 +57,9 @@ Se um dos seus nós com maior id responder, esse assume
 - O maior sempre ganha, por isso o nome de "Algoritmo do valentão"
 
 Depois que o processo estiver pronto para assumir, anuncia a sua liderança para todos os outros processos.
-```
 
 8. Descreva o funcionamento do algoritmo de eleição em anel.
 
-```
 A prioridade dos processos é obtida organizando-os em um anel lógico
 
 - O processo com maior prioridade deve ser eleiot coordenador
@@ -88,4 +85,3 @@ O tipo da mensagem é então mudado para COORDINATOR e circulada novamente
 - Serve para informar a todos quem é o coordenador (o membro da lista com maior id) e quais são os membros do novo anel
 
 Uma vez que essa mensagem tenha circulado, ela é removida, e todos voltam ao trabalho
-```
