@@ -50,12 +50,14 @@ A comunicação síncrona:
 
 7. Defina comunicação persistente e comunicação transiente. Dê exemplos.
 
+```
 Comunicação Transiente:
 
 - É um modelo simples orientado a mensagens oferecido pela camada de transporte
 - Um ponto de c
 
 Comunicação Persistente:
+```
 
 8. Um programa que faz uso de RPC para invocar um método cuja implementação se encontra em outro computador interage, na máquina em que este programa está rodando, com um determinado componente do middleware. Que nome tem esse componente?
 
