@@ -30,19 +30,19 @@ Exemplos de protocolos da camada de Aplicação do modelo OSI podem ser: HTTP, F
 As chamadas de Procedimentos Remotos permite que programas chamem procedimentos em outras máquinas, dessa forma podem esconder a comunicação entre chamador & chamado.
 ```
 
-5. Sistemas de e-mail são exemplos tı́picos de qual tipo de comunicação?
+5. Sistemas de e-mail são exemplos típicos de qual tipo de comunicação?
 
 ```
 São exemplos de comunicação síncrona.
 ```
 
-6. Defina comunicação assíncrona e comunicação sı́ncrona. Dê exemplos.
+6. Defina comunicação assíncrona e comunicação síncrona. Dê exemplos.
 
 ```
 A comunicação assíncrona: 
 
     - O emissor continua seu trabalho imediatamente após enviar a mensagem.
-    - Esta é temporariamente armazenada no *middleware*
+    - Esta é temporariamente armazenada no middleware
 
 A comunicação síncrona:
 
@@ -54,12 +54,12 @@ A comunicação síncrona:
 ```
 Comunicação Transiente:
 
-    - O *middleware* armazena a mensagem somente enquanto o emissor e receptor estiverem executando.
+    - O middleware armazena a mensagem somente enquanto o emissor e receptor estiverem executando.
     - Ela descarta a mensagem se ela não puder ser encaminhada para o destinatário ou ao próximo servidor.
 
 Comunicação Persistente:
 
-    - A mensagem é armazenada no *middleware* de comunicação pelo tempo que for necessário para que seja entregue.
+    - A mensagem é armazenada no middleware de comunicação pelo tempo que for necessário para que seja entregue.
     - Assim, a aplicação remetente não precisa continuar sua execução após o envio da mensagem.
     - Nem a aplicação receptora precisa estar rodando quando a mensagem é enviada.
 ```
@@ -95,59 +95,59 @@ Comunicação Persistente:
 - Message-Passing Interface (MPI)
 ```
 
-12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é ** mais adequada ** para que tipo de comunicação?
+12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é mais adequada para que tipo de comunicação?
 
 ```
 - Comunicação Transiente
 ```
 
-13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assı́ncrona e persistente?
+13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assíncrona e persistente?
 
 ```
-- **Filas** pelo middleware
-- Filas correspondem a *buffers* em servidores de comunicação
+- Filas pelo middleware
+- Filas correspondem a buffers em servidores de comunicação
 ```
 
 
-14. Pensando em como funciona a atribuição de números de telefone, podemos considerar um número de telefone um identificador? Por que? Um número de telefone ** não ** pode ser considerando um identificador, pois:
-
-```
-
-```
-
-15. Cite as caracterı́sticas que um identificador precisa ter. Qual alternativa abaixo é ** falsa ** em relação à definição de identificadores?
+14. Pensando em como funciona a atribuição de números de telefone, podemos considerar um número de telefone um identificador? Por que? Um número de telefone não pode ser considerando um identificador, pois:
 
 ```
 
 ```
 
-16. Explique como funcionam as Tabelas de Hash Distribuı́das baseadas no Chord. Qual a informação ** incorreta ** sobre Tabelas de Hash Distribuídas baseadas no Chord?
+15. Cite as características que um identificador precisa ter. Qual alternativa abaixo é falsa em relação à definição de identificadores?
 
 ```
 
 ```
 
-17. O sistema de nomes utilizado no DNS é estruturado e a resolução de nomes DNS é organizada simultaneamente por diversos paı́ses e organizações. Ainda assim, não é possı́vel afirmar que um nome associado a um domı́nio como, por exemplo, https://www.un.org/, está relacionado a uma entidade em um paı́s especı́fico. Qual a alternativa abaixo que melhor explica essa constatação?
+16. Explique como funcionam as Tabelas de Hash Distribuídas baseadas no Chord. Qual a informação incorreta sobre Tabelas de Hash Distribuídas baseadas no Chord?
 
-(a) Ainda que a hierarquia de nomes seja gerenciada por paı́ses diferentes, nada se pode dizer sobre a localização geográfica do ponto de acesso da entidade referenciada por um nome
+```
 
-(b) O endereço https://www.un.org/ se refere a um organismo internacional e, por isso, seu servidor encontra-se em águas internacionais
+```
 
-(c) Um órgão de atribuição de nomes DNS como o registro.br só pode atribuir nomes .com.br a entidades que estejam em solo nacional
+17. O sistema de nomes utilizado no DNS é estruturado e a resolução de nomes DNS é organizada simultaneamente por diversos países e organizações. Ainda assim, não é possível afirmar que um nome associado a um domínio como, por exemplo, https://www.un.org/, está relacionado a uma entidade em um país específico. Qual a alternativa abaixo que melhor explica essa constatação?
 
-(d) Uma vez atribuı́do o nome a uma entidade de um paı́s, essa entidade não pode ser movida para outro paı́s
+    (a) Ainda que a hierarquia de nomes seja gerenciada por países diferentes, nada se pode dizer sobre a localização geográfica do ponto de acesso da entidade referenciada por um nome
+
+    (b) O endereço https://www.un.org/ se refere a um organismo internacional e, por isso, seu servidor encontra-se em águas internacionais
+
+    (c) Um órgão de atribuição de nomes DNS como o registro.br só pode atribuir nomes .com.br a entidades que estejam em solo nacional
+
+    (d) Uma vez atribuído o nome a uma entidade de um país, essa entidade não pode ser movida para outro país
 
 ```
 A alternativa: 
 ```
 
-18. Hard link e soft link s ̃ao exemplos de que tipo de nomes?
+18. Hard link e soft link são exemplos de que tipo de nomes?
 
 ```
 O Hard link e o Soft link são exemplos do tipo de nome a, pois eles a
 ```
 
-19. Sistemas de arquivos distribu ́ıdos s ̃ao um exemplo de sistemas que usam que tipo de nomes?
+19. Sistemas de arquivos distribuídos são um exemplo de sistemas que usam que tipo de nomes?
 
 ```
 Sistemas de arquivos distribuídos são um exemplo de sistemas que usam o tipo de nome a
