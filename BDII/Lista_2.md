@@ -16,7 +16,7 @@ saldo
 pessoa
 ```
 
-2. Suponha a consulta $$ _{nomeMusica = "Andança"} _{intérprete = "Beth Carvalho"} $$ (Musica). Considere que a tabela Msuica está organizada por código da música e que existe um índice primário esparso e outro índice secundário por intérprete. Apresente três diferentes planos de execução de consulta para a expressão fornecida.
+2. Suponha a consulta $$ \sigma_{nomeMusica = "Andança"} \ \ \ \sigma_{intérprete = "Beth Carvalho"} $$ (Musica). Considere que a tabela Musica está organizada por código da música e que existe um índice primário esparso e outro índice secundário por intérprete. Apresente três diferentes planos de execução de consulta para a expressão fornecida.
 
 - Consulta 1:
 
@@ -31,31 +31,31 @@ A segunda consulta pode ser feita usando o índice secundário por intérprete e
 
 A terceira consulta pode ser feita usando o índice secundário por intérprete e fazer uma busca binária
 
-3. Suponha a consulta $$ _{nomeMusica = "Andança"} _{intérprete = "Beth Carvalho"} $$ (Musica). Considere que a tabela Msuica está organizada por código da música e que existe um índice primário esparso ordenado (n = 30) e outro índice secundário por intérprete (n = 40)
+3. Suponha a consulta $$ \sigma_{nomeMusica = "Andança"} \ \ \ \sigma_{intérprete = "Beth Carvalho"} $$ (Musica). Considere que a tabela Msuica está organizada por código da música e que existe um índice primário esparso ordenado (n = 30) e outro índice secundário por intérprete (n = 40)
 
-	1. Apresente três diferentes planos de execução de consulta para a expressão dada
+	a. Apresente três diferentes planos de execução de consulta para a expressão dada
 
-Repitido (?)
+		Repitido (?)
 
-	2. Calcule o custo total de cada plano de consulta, considerando $$ N_{musica} = 10000}, V(nomeMusica, Musica) = 3000, V(interprete, Musica) = 1000 $$.
+	b. Calcule o custo total de cada plano de consulta, considerando $$ N_{musica} = 10000, \ V(nomeMusica, Musica) = 3000, \ V(interprete, Musica) = 1000. $$
 
-- Consulta 1:
+		- Consulta 1:
 
-O Custo Total de uma `Busca Linear (A1)` é dado por:
+			O Custo Total de uma `Busca Linear (A1)` é dado por:
 
-$$ E_{A1} = b_{r} $$
+			$$ E_{A1} = b_{r} $$
 
-$$ E_{A1} = b_{r} $$
+			$$ E_{A1} = b_{r} $$
 
-- Consulta 2:
+		- Consulta 2:
 
-O Custo Total de uma `Busca Linear (A1)` é dado por:
+			O Custo Total de uma `Busca Linear (A1)` é dado por:
 
-- Consulta 3:
+		- Consulta 3:
 
-O Custo Total de uma `Busca Binária (A2)` é dado por:
+			O Custo Total de uma `Busca Binária (A2)` é dado por:
 
-	3. Analise os resultados e explique qual é o melhor plano, justificando sua resposta
+	c. Analise os resultados e explique qual é o melhor plano, justificando sua resposta
 
 4. Suponha a consulta numeroAluno = "123456" (Aluno) e que a relação Aluno está ordenada fisicament por número do aluno. Qual é o custo a consulta para busca linear e busca binária, sabendo que o número do aluno é chave primária? Se houver um índice primário (ordenado) com n = 20 qual seria o custo da consulta usando esse índice?
 
