@@ -38,13 +38,13 @@ Na consulta do nome da música pode ser feita uma busca sequencial no resultado 
 
 3. Suponha a consulta $$ \sigma_{nomeMusica = "Andança"} \sigma_{intérprete = "Beth Carvalho"} $$ (Musica). Considere que a tabela Musica está organizada por código da música e que existe um índice primário esparso ordenado (n = 30) e outro índice secundário por intérprete (n = 40)
 
-3.1. Apresente três diferentes planos de execução de consulta para a expressão dada
+- Apresente três diferentes planos de execução de consulta para a expressão dada
 
 Repitido (?)
 
-3.2. Calcule o custo total de cada plano de consulta, considerando $$ N_{musica} = 10000}, V(nomeMusica, Musica) = 3000, V(interprete, Musica) = 1000 $$.
+- Calcule o custo total de cada plano de consulta, considerando $$ N_{musica} = 10000}, V(nomeMusica, Musica) = 3000, V(interprete, Musica) = 1000 $$.
 
-- Consulta 1:
+	- Consulta 1:
 
 O Custo Total de uma `Busca Binária (A2)` é dado por:
 
@@ -78,15 +78,15 @@ $$ E_{A1} = \frac{1}{9} $$
 
 $$ E_{A1} = 1 $$
 
-- Consulta 2:
+	- Consulta 2:
 
 O Custo Total de uma `Busca Linear (A1)` é dado por:
 
-- Consulta 3:
+	- Consulta 3:
 
 O Custo Total de uma `Busca Binária (A2)` é dado por:
 
-	3. Analise os resultados e explique qual é o melhor plano, justificando sua resposta
+3. Analise os resultados e explique qual é o melhor plano, justificando sua resposta
 
 4. Suponha a consulta numeroAluno = "123456" (Aluno) e que a relação Aluno está ordenada fisicament por número do aluno. Qual é o custo a consulta para busca linear e busca binária, sabendo que o número do aluno é chave primária? Se houver um índice primário (ordenado) com n = 20 qual seria o custo da consulta usando esse índice?
 
@@ -320,3 +320,56 @@ $$ E_{A7} = 5 + 5000 + 100000 $$
 
 $$ E_{A7} = 105005 $$
 
+11. Suponha que para o cálculo de consulta nomeAluno < ”John Lennon” ^ media > 7 (Aluno) haja um índice árvore-B+ primário para o atributo nomeAluno, com n=10 (chave não é única) e um índice secundário para média (chave não é única), com n=20:
+
+- Apresente quatro diferentes planos de execução de consulta para a expressão dada
+
+	- Consulta 1:
+
+```
+a
+```
+
+	- Consulta 2:
+
+```
+a
+```
+
+	- Consulta 3:
+
+```
+a
+```
+
+	- Consulta 4:
+
+```
+a
+```
+
+- Calcule o custo total de cada plano de consulta
+
+	- Consulta 1:
+
+	- Consulta 2:
+
+	- Consulta 3:
+
+	- Consulta 4:
+
+- Análise os resultados e explique qual é o melhor plano, justificando sua resposta.
+
+12. Considerando os dados disponibilizados no final da lista e sabendo que cabem 21 blocos na memória da máquina, qual é o custo para classificar a Relação aluno usando o algoritmo sort-merge-externo?
+
+$$ E = b_{r}(2 |log_{M-1}(\frac{b_{r}}{M})| + 1)$$
+
+$$ E = \frac{200000}{40}(2 \lceil log_{21-1}(\frac{\frac{200000}{40}}{21}) \rceil + 1)$$
+
+$$ E = 5000(2 \lceil log_{21-1}(\frac{5000}{21}) \rceil + 1)$$
+
+$$ E = 5000(16 + 1)$$
+
+$$ E = 5000 \times 17$$
+
+$$ E = 85000 $$
