@@ -1,0 +1,13 @@
+Example | Alt | Bar | Fri | Hun | Pat  | Price | Rain | Res | Type    | Est   | WillWait
+X1      | Yes | No  | No  | Yes | Some | $$$   | No   | Yes | French  | 0-10  | y1  = Yes
+X9      | Yes | No  | No  | Yes | Full | $     | No   | No  | Thai    | 30-60 | y2  = No
+X3      | No  | Yes | No  | No  | Some | $     | No   | No  | Burger  | 0-10  | y3  = Yes
+X4      | Yes | No  | Yes | Yes | Full | $     | Yes  | No  | Thai    | 10-30 | y4  = Yes
+X5      | Yes | No  | Yes | No  | Full | $$$   | No   | Yes | French  | >60   | y5  = No
+X6      | No  | Yes | No  | Yes | Some | $$    | Yes  | Yes | Italian | 0-10  | y6  = Yes
+X7      | No  | Yes | No  | No  | None | $     | Yes  | No  | Burger  | 0-10  | y7  = No
+X8      | No  | No  | No  | Yes | Some | $$    | Yes  | Yes | Thai    | 0-10  | y8  = Yes
+X9      | No  | Yes | Yes | No  | Full | $     | Yes  | No  | Burger  | >60   | y9  = No
+X10     | Yes | Yes | Yes | Yes | Full | $$$   | No   | Yes | Italian | 10-30 | y10 = No
+X11     | No  | No  | No  | No  | None | $     | No   | No  | Thai    | 0-10  | y11 = No
+X12     | Yes | Yes | Yes | Yes | Full | $     | No   | No  | Burger  | 30-60 | y12 = Yes
