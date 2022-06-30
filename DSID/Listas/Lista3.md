@@ -52,9 +52,13 @@
 
     - Esta é temporariamente armazenada no middleware
 
+        - aplicativos de mensagem
+
     A comunicação síncrona:
 
     - O emissor é bloqueado até ter certeza de que sua requisição foi aceita.
+
+        - ligação telefônica
 
 <br>
 
@@ -66,6 +70,10 @@
 
     - Ela descarta a mensagem se ela não puder ser encaminhada para o destinatário ou ao próximo servidor.
 
+        - Java
+
+        - Operating system
+
     Comunicação Persistente:
 
     - A mensagem é armazenada no middleware de comunicação pelo tempo que for necessário para que seja entregue.
@@ -73,6 +81,8 @@
     - Assim, a aplicação remetente não precisa continuar sua execução após o envio da mensagem.
 
     - Nem a aplicação receptora precisa estar rodando quando a mensagem é enviada.
+
+        - MPI_COMM_WORLD
 
 <br>
 
