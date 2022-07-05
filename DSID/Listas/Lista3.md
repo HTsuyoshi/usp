@@ -1,8 +1,12 @@
 # Lista 3
 
+<br>
+
 1. Considerando o modelo ISO-OSI, em qual camada se encaixa o IP (Internet Protocol)?
 
-O Internet Protocol se encaixa na camada de rede.
+    O Internet Protocol se encaixa na camada de rede.
+    
+<br>
 
 2. Quais as camadas do modelo OSI, e qual o propósito de cada uma?
 
@@ -20,51 +24,77 @@ O Internet Protocol se encaixa na camada de rede.
 
 - Camada de Física: Transmite bits (Quantos volts usar para cada, quantos bits/segundo enviar, etc).
 
+<br>
+
 3. Dê exemplos de protocolos da camada de Aplicação do modelo OSI
 
-Exemplos de protocolos da camada de Aplicação do modelo OSI podem ser: HTTP, FTP, TFTP, SSH, TelNet, SMTP, DHCP, DNMP.
+    Exemplos de protocolos da camada de Aplicação do modelo OSI podem ser: HTTP, FTP, TFTP, SSH, TelNet, SMTP, DHCP, DNMP.
+
+<br>
 
 4. O que são as Chamadas de Procedimentos Remotos (RPC)?
 
-As chamadas de Procedimentos Remotos permite que programas chamem procedimentos em outras máquinas, dessa forma podem esconder a comunicação entre chamador & chamado.
+    As chamadas de Procedimentos Remotos permite que programas chamem procedimentos em outras máquinas, dessa forma podem esconder a comunicação entre chamador & chamado.
+
+<br>
 
 5. Sistemas de e-mail são exemplos típicos de qual tipo de comunicação?
 
-São exemplos de comunicação síncrona.
+    São exemplos de comunicação síncrona.
+
+<br>
 
 6. Defina comunicação assíncrona e comunicação síncrona. Dê exemplos.
 
-A comunicação assíncrona:
+    A comunicação assíncrona:
 
-- O emissor continua seu trabalho imediatamente após enviar a mensagem.
+    - O emissor continua seu trabalho imediatamente após enviar a mensagem.
 
-- Esta é temporariamente armazenada no middleware
+    - Esta é temporariamente armazenada no middleware
 
-A comunicação síncrona:
+        - aplicativos de mensagem
 
-- O emissor é bloqueado até ter certeza de que sua requisição foi aceita.
+    A comunicação síncrona:
+
+    - O emissor é bloqueado até ter certeza de que sua requisição foi aceita.
+
+        - ligação telefônica
+
+<br>
 
 7. Defina comunicação persistente e comunicação transiente. Dê exemplos.
 
-Comunicação Transiente:
+    Comunicação Transiente:
 
-- O middleware armazena a mensagem somente enquanto o emissor e receptor estiverem executando.
+    - O middleware armazena a mensagem somente enquanto o emissor e receptor estiverem executando.
 
-- Ela descarta a mensagem se ela não puder ser encaminhada para o destinatário ou ao próximo servidor.
+    - Ela descarta a mensagem se ela não puder ser encaminhada para o destinatário ou ao próximo servidor.
 
-Comunicação Persistente:
+        - Java
 
-- A mensagem é armazenada no middleware de comunicação pelo tempo que for necessário para que seja entregue.
+        - Operating system
 
-- Assim, a aplicação remetente não precisa continuar sua execução após o envio da mensagem.
+    Comunicação Persistente:
 
-- Nem a aplicação receptora precisa estar rodando quando a mensagem é enviada.
+    - A mensagem é armazenada no middleware de comunicação pelo tempo que for necessário para que seja entregue.
+
+    - Assim, a aplicação remetente não precisa continuar sua execução após o envio da mensagem.
+
+    - Nem a aplicação receptora precisa estar rodando quando a mensagem é enviada.
+
+        - MPI_COMM_WORLD
+
+<br>
 
 8. Um programa que faz uso de RPC para invocar um método cuja implementação se encontra em outro computador interage, na máquina em que este programa está rodando, com um determinado componente do middleware. Que nome tem esse componente?
 
+<br>
+
 9. A camada de transporte hoje nos oferece uma interface simples para mensagens. Que interface é essa?
 
-A interface é o modelo Socket
+    A interface é o modelo Socket
+
+<br>
 
 10. Quais operações são permitidas em sockets, segundo o POSIX?
 
@@ -84,22 +114,32 @@ A interface é o modelo Socket
 
 - CLOSE (Libera a conexão)
 
+<br>
+
 11. A necessidade de independência de hardware e plataforma levou ao surgimento de um padrão para troca de mensagens. Que padrão é esse?
 
 - Message-Passing Interface (MPI)
 
+<br>
+
 12. Por ser projetada para aplicações paralelas, a Interface de Passagem de Mensagens (MPI) é **mais adequada** para que tipo de comunicação?
 
 - Comunicação Transiente
+
+<br>
 
 13. Como podemos ter um sistema que ofereça comunicação orientada a mensagens de forma assíncrona e persistente?
 
 - Comunicação assíncrona e persistente graças ao uso de filas pelo middleware
 - Filas correspondem a buffers em servidores de comunicação
 
+<br>
+
 14. Pensando em como funciona a atribuição de números de telefone, podemos considerar um número de telefone um identificador? Por que?
 
-Sim, pois cada chip de celular pode ter apenas um número
+    Sim, pois cada chip de celular pode ter apenas um número
+
+<br>
 
 15. Cite as características que um identificador precisa ter. 
 
@@ -107,23 +147,27 @@ Sim, pois cada chip de celular pode ter apenas um número
 - Cada entidade é referenciada por, no máximo, um identificador
 - Um identificador sempre se refere à mesma entidade (nunca é reutilizado)
 
+<br>
+
 16. Explique como funcionam as Tabelas de Hash Distribuídas baseadas no Chord.
 
-As tabelas distribuídas baseadas no Chord são um sistema peer-to-peer estruturado, os nós são organizados na forma de um anel lógico.
+    As tabelas distribuídas baseadas no Chord são um sistema peer-to-peer estruturado, os nós são organizados na forma de um anel lógico.
+    
+    - A cada nó é atribuido um identificador aleatório de m-bits
 
-- A cada nó é atribuido um identificador aleatório de m-bits
+    - A cada entidade é atribuída uma única chave de m-bits
 
-- A cada entidade é atribuída uma única chave de m-bits
+    - O anel é estendido com vários links de atalho para outros nós
 
-- O anel é estendido com vários links de atalho para outros nós
+    - Construído de modo que o comprimento do menor caminho entre qualquer par de nós é da ordem de O(log(N)), onde N é o número total e nós
 
-- Construído de modo que o comprimento do menor caminho entre qualquer par de nós é da ordem de O(log(N)), onde N é o número total e nós
+    - Entidades com chave k são armazenadas no nó com o menor $ id \geq k $ (seu sucessor suc(k))
 
-- Entidades com chave k são armazenadas no nó com o menor $ id \geq k $ (seu sucessor suc(k))
+    Busca:
 
-Busca:
+    - Passa a requisição para o nó mais longe, mas sem ultrapassar o nó responsável por ela
 
-- Passa a requisição para o nó mais longe, mas sem ultrapassar o nó responsável por ela
+<br>
 
 17. O sistema de nomes utilizado no DNS é estruturado e a resolução de nomes DNS é organizada simultaneamente por diversos países e organizações. Ainda assim, não é possível afirmar que um nome associado a um domínio como, por exemplo, https://www.un.org/, está relacionado a uma entidade em um país específico. Qual a alternativa abaixo que melhor explica essa constatação?
 
@@ -135,13 +179,17 @@ Busca:
 
     (d) Uma vez atribuído o nome a uma entidade de um país, essa entidade não pode ser movida para outro país
 
-A alternativa: a
+    A alternativa: (a)
+
+<br>
 
 18. Hard link e soft link são exemplos de que tipo de nomes?
 
-O Hard link e o Soft link são exemplos do tipo de Nomes Estruturados.
+    O Hard link e o Soft link são exemplos do tipo de Nomes Estruturados.
+
+<br>
 
 19. Sistemas de arquivos distribuídos são um exemplo de sistemas que usam que tipo de nomes?
 
-Sistemas de arquivos distribuídos são um exemplo de sistemas que usam Implementação de Espaços de Nomes.
+    Sistemas de arquivos distribuídos são um exemplo de sistemas que usam Implementação de Espaços de Nomes.
 
