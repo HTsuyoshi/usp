@@ -54,11 +54,24 @@ O `mounter` utiliza o remote procedure call para o servidore remoto e pede pelo 
 
 ### Por que usar file handle?
 
-Para referenciar os arquivos no sistem de arquivos remoto, também é possível utilizar o caminho absoluto do arquivo, mas isso acaba criando alguns problemas que o `file handle` pode resolver
+Para referenciar os arquivos no sistem de arquivos remoto, também é possível utilizar o caminho absoluto do arquivo, mas isso acaba criando alguns problemas que o `file handle` pode resolver.
 
-Supondo que um programa no cliente 1 esteja modificando um diretório no servidor, e ao mesmo tempo um certo programa 2 modifique o nome do diretório 
+Para ver um exemplo disso em prática, supomos que um programa no cliente 1 esteja modificando um diretório no servidor, e ao mesmo tempo um certo programa 2 modifique o nome do diretório 
+
+Exemplo na página 2 do paper
 
 ## The NFS remote procedure calls
 
-## 
+### Como são feitas as chamadas remotas?
+
+Pegando como um exemplo o código do exemplo anterior
+
+O usuário tenta abrir um arquivo chamado `nota.txt` e depois tenta ler o conteúdo desse arquivo para dentro de um buffer
+
+O progama então faz uma `remote procedure call` para o servidor procurando pelo arquivo chamado `nota.txt` no diretório atual `dirfh` que foi obtido na última vez que o sistema foi montado
+
+O servidor então recebe o pega o identificador do `dirfh` e procura pelo arquivo dentro do diretório `dirfh`
+
+
+## a
 
