@@ -105,11 +105,11 @@ $$l = 3$$
 		CR3 --x|T = 6 Higher| FR4((F))
 		CR3 -->|T = 4| ER4((E 5))
 		ER4 --x|T = 5 Higher| CR51((C))
-		ER4 --x|T = 5| FR5((F 8))
+		ER4 --x|T = 5| FR5((F 6))
 		BR2 -->|T = 2| DR3((D 3))
 		DR3 --x|T = 4 Higher| BR41((B))
 		DR3 --x|T = 8 Higher| FR41((F))
 		DR3 --x|T = 8 Higher| CR4((C))
-		AR1 --x|T = 5 Higher| CR2((C 6))
+		AR1 --x|T = 5 Higher| CR2((C))
 ```
 
