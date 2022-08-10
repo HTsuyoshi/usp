@@ -13,7 +13,7 @@
 
 1. [Busca cega](./busca-cega.md)
 
-2. Busca informada
+2. [Busca informada](./busca-informada.md)
 
 3. Programação Dinâmica
 

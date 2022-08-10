@@ -23,6 +23,8 @@ O desempenho de um disco magnético pode ser medido pelos seguintes fatores:
 - Volatilidade
 - Velocidade
 - Falhas
+
+Dar uma olhada
 ```
 
 3. Defina setor e bloco no contexto de bancos de dados. Explique porque esses conceitos são importantes na modelagem de um banco de dados relacional.
@@ -54,8 +56,6 @@ No RAID nível 5 existe a paridade distribuída intercalada por bloco. Tendo mel
 
 No RAID nível 6 redundância P + Q. Armazena duas funçoes de paridade. Consequência: dois discos dedicados. Assegura segurança no caso de avariar 2 discos simultaneamente.
 ```
-
-# Verificar
 
 5. Explique a organização sequencial de registros em arquivos e cite os problemas dessa organização. Explique como ocorre a busca neste tipo de organização de registros quando são usados índices ordenados secundários.
 
@@ -148,31 +148,37 @@ Desvantagens:
 9. O que são índices multiníveis? Dê um exemplo.
 
 ```
-Os índices multiníveis são índices que apontam para índices
+i
 ```
 
 10. Explique como ocorre a localização de um registro em um índice multinível. Dê um exemplo.
 
 Considere o arquivo de dados abaixo , organizado sequencialmente, para responder as questões a seguir.
 
-| Código | Crédito | Nome    | Cidade
-| 3      | 2000    | Antonio | Araraquara
-| 4      | 3000    | Beatriz | São Paulo
-| 6      | 5000    | Claudia | Recife
-| 5      | 1000    | Claudia | Recife
-| 9      | 1500    | Lucas   | São Paulo
-| 10     | 2500    | Marina  | Lins
-| 12     | 3000    | Marina  | Araraquara
-| 11     | 4000    | Marina  | Macatuba
-| 13     | 2500    | Mirtes  | Lins
-| 2      | 3000    | Valter  | Araraquara
-| 1      | 4000    | Valter  | Macatuba
-| 7      | 3500    | Tarso   | Recife
-| 8      | 3500    | Tarso   | São Paulo
+
+Código | Crédito | Nome    | Cidade
+-- | -- | -- | -- |
+3      | 2000    | Antonio | Araraquara
+4      | 3000    | Beatriz | São Paulo
+6      | 5000    | Claudia | Recife
+5      | 1000    | Claudia | Recife
+9      | 1500    | Lucas   | São Paulo
+10     | 2500    | Marina  | Lins
+12     | 3000    | Marina  | Araraquara
+11     | 4000    | Marina  | Macatuba
+13     | 2500    | Mirtes  | Lins
+2      | 3000    | Valter  | Araraquara
+1      | 4000    | Valter  | Macatuba
+7      | 3500    | Tarso   | Recife
+8      | 3500    | Tarso   | São Paulo
 
 11. Construa um índice primário ordenado denso.
 
+Feito
+
 12. Construa um índice primário ordenado esparso. Considere que em cada bloco cabem 3 registros de dados.
+
+Feito
 
 13. Construa um índice ordenado secundário para o atributo nome.
 
@@ -198,19 +204,15 @@ b) Apresente a árvore resultante após a inclusão do seguinte registro de dado
 
 Comentário [A1]: Como fazer:
 
-1)Achar qtde de folhas = (qtde
-chaves/(n-1))
+1)Achar qtde de folhas = (qtde chaves/(n-1))
 2)Preencher folhas
-3)Achar qtede de nós nível anterior de
-acordo com qtde folhas. Qtde nós
-internos nível anterior = (qtde folhas)/n
-(precisa ter número de ponteiros
-suficientes para apontar pras folhas)
-4)Primeira chave do nó (exceção do
-primeiro nó) vai preencher nó interno
-do nível anterior
+3)Achar qtede de nós nível anterior de acordo com qtde folhas. Qtde nós internos nível anterior = (qtde folhas)/n (precisa ter número de ponteiros suficientes para apontar pras folhas)
+4)Primeira chave do nó (exceção do primeiro nó) vai preencher nó interno do nível anterior
 
 19. Que considerações deveriam ser feitas em relaçao à criação do índice da questão anterior para que fosse possível construí-lo como índice ordenado esparso? Neste caso, como seria a inclusão da tupla do item (b)?
+
+```
+```
 
 20. Construa um índice usando árvore B+ para o atributo cidade com n=3.
 
