@@ -36,9 +36,17 @@ Perdi ou não teve códigos em todas as matérias com \*
     * SO (Sistemas Operacionais)
     * OAC II (Organização e Arquitetura de Computadores II)\*
 
-* Semestre 5 (Currently)
+* Semestre 5
     * IHC (Análise, Projeto e Interface Humano-Computador)
     * IA (Inteligência Artificial)
     * BD II (Banco de Dados II)
     * DSID (Desenvolvimento de Sistemas de Informação Distribuídos)
 		* [EP](https://github.com/HTsuyoshi/dsid-ep-1)
+
+* Semestre 6 (Currently)
+    * Arte, Literatura e Cultura
+    * Empreendedorismo em Informática
+    * Engenharia de Sistemas de Informação I
+    * Gestão de Projetos de Tecnologia da Informação
+    * Psicologia, Educação e Temas Contemporâneos
+    * Resolução de Problemas II
